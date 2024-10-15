@@ -1,0 +1,14 @@
+<h2>Detalles del producto</h2>
+
+<div *ngIf="product">
+  <div *ngIf="product.imagenes && product.imagenes.length > 0" [routerLink]="['/products', product.idproducto]">
+    <!-- Carga la primera imagen -->
+    <img [src]="product.imagenes[0].imagen" alt="{{ product.nombre }}" class="product-image" />
+  </div>
+  <h3>{{ product.nombre }}</h3>
+  <h4>{{ product.precio | currency }}</h4>
+  <p>{{ product.descripcion }}</p>
+  <button type="button" (click)="addToCart(product)">
+    <em class="material-icons" id="carrito_imagen">shopping_cart</em>Añadir al carrito
+  </button>
+</div>

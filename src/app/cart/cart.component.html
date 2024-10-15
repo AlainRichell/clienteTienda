@@ -1,0 +1,22 @@
+<h3>Carrito</h3>
+
+<div class="cart-item" *ngFor="let item of items; let i = index">
+  <span>{{ item.nombre }}</span>
+  <div>
+    <span>{{ item.precio | currency }}</span>
+    <button class="rmb" (click)="removeItem(i)">Quitar</button>
+  </div>
+</div>
+
+<div *ngIf="items.length > 0" class="cart-item">
+  <span>Total: </span>
+  <span>{{ total | currency }}</span>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" *ngIf="items.length > 0">  
+    <button class="button" type="submit">Comprar</button>
+</form>
+
+<div *ngIf="items.length < 1">
+  Si no seleccionas ningun producto aquí por supuesto que no hay nada.
+</div>

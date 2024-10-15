@@ -1,0 +1,41 @@
+/* Estilos del contenedor principal del footer */
+.footer-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: #0C4B33;
+    padding: 20px 0;
+    margin-top: 32px;
+    text-align: center;
+  }
+  
+  /* Contenedor de los botones de redes sociales */
+  .social-media {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-bottom: 16px;
+    margin-top: 16px;     /* Espacio entre redes sociales y copyright */
+  }
+  
+  /* Botones de redes sociales */
+  .social-media button {
+    background-color: #0C4B33;
+    padding: 10px 20px;
+    margin: 0 10px;          /* Espacio entre botones */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* Copyright */
+  h2 {
+    margin: 0;
+    font-size: 18px;
+    color: white
+  }
+  

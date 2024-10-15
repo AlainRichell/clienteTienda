@@ -1,0 +1,23 @@
+<div class="toolbar_logotipo">
+  <img class="toolbar_logo" src="assets/logoTienda.png" alt="">
+
+  <a [routerLink]="['/']">
+    <h1>{{nombreTienda}}</h1>
+  </a>
+</div>
+
+<div class="search-bar-separator">
+  <app-search-bar></app-search-bar>
+</div>
+
+
+<a routerLink="/cart" class="button fancy-button">
+  <em class="material-icons" id="carrito_imagen">shopping_cart</em>Carrito
+</a>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

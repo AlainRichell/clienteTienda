@@ -1,0 +1,27 @@
+.toolbar_logotipo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar_logo {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+#carrito_imagen {
+    color: #0C4B33;
+    padding-right: 8px;
+}
+
+.search-bar-separator {
+    display: flex;
+    flex-grow: 1; /* Permite que la barra de búsqueda ocupe el espacio restante */
+    justify-content: center;
+  }
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

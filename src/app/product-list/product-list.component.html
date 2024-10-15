@@ -1,0 +1,28 @@
+<h2>Productos</h2>
+
+<div class="product-container">
+  <div *ngFor="let product of products" class="product-card">
+    <!-- Verifica si el producto tiene imágenes -->
+    <div *ngIf="product.imagenes && product.imagenes.length > 0" [routerLink]="['/products', product.idproducto]">
+      <!-- Carga la primera imagen -->
+      <img [src]="product.imagenes[0].imagen" alt="{{ product.nombre }}" class="product-image" />
+    </div>
+    <h3>
+      <a [title]="product.nombre + ' details'"
+         [routerLink]="['/products', product.idproducto]">
+        {{ product.nombre }}
+      </a>
+    </h3>
+    
+    <p *ngIf="product.precio">
+      {{ product.descripcion }}
+    </p>
+
+    <button type="button" class="btn-share" (click)="share()">
+      Share
+    </button>
+
+    <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+  </div>
+</div>
+
